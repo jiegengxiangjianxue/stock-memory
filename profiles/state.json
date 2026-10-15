@@ -1,20 +1,18 @@
 {
- "as_of": "2026-10-16T02:50+08:00",
+ "as_of": "2026-10-16T03:15+08:00",
  "done": [
-  "P0 四项: cyq换手率修复(turnover_rate列36分区607万行回填)+data_check+decision配置化+ATR止损+fusion missing标记+loss_attr四桶",
-  "P1 五项: algo_base/adapters(ALGOS注册表)/strategy_leaderboard(duckdb)/analyzers五指标/backtest滑点+一字板过滤/agent_debate(bull-bear-manager)/pipeline_state/market_data统一行情 — algo-core HEAD=2b7c28ab, engine-core HEAD=ee6d3e08",
-  "stock-memory/research/ 三件套",
-  "89源适配器库+工作台+网站审核"
+  "P0+P1+P2 全部12项完成 (24+ commits): 算法引擎链七环全通",
+  "P2: run_registry/drift_monitor/walkforward交易日embargo/CDL形态5因子/涨停阈值修正/news_eval T+5/pick_tracker性能/LIKE修复/daily_brief备源/predict logistic校准",
+  "双胞胎大合并完成: GitHub=canonical(63引擎), gitcode=镜像, ENGINE_REGISTRY登记ownership",
+  "gitcode 17独有引擎并入GitHub; GitHub修复版推回gitcode"
  ],
  "in_progress": [
-  "P2 五项(run_registry+drift_monitor/CDL形态+涨停阈值修正/news_eval T+5/pick_tracker性能/predict校准)后台中",
-  "云端分片(cron免费仓延迟10-60min属正常, 已手动补触发)",
-  "本机daily 3081/5575 + flow 775/4885"
+  "本机资金流回补 1101/4885 (daily已交云端)",
+  "云端分片Actions"
  ],
  "todo": [
-  "minute1续补",
   "港股层",
-  "P1 demos验证扩展",
-  "engine_v5 fund收益率越界"
+  "minute1",
+  "工作台接入新引擎数据"
  ]
 }
