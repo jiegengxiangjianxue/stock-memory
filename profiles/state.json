@@ -1,7 +1,23 @@
 {
-  "as_of": "2026-10-16",
-  "done": ["6分片仓+Actions部署+双job冲突修复", "全市场symbol表5575只", "云端首批backfill提交并验证1997数据", "db-warehouse v4架构文档"],
-  "in_progress": ["云端全史回补(约2天)", "本机回补(1493+/5575)", "算法引擎链合并(借鉴qlib/backtrader/lumibot等30+项目)", "React工作台", "skills接口入库"],
-  "todo": ["moneyflow续补(sh600476后)", "minute1续补", "港股层", "89数据源接口代码化入库"],
-  "user_prefs": ["只报事实不预测", "简洁", "价格给具体数字", "React+TS+Tailwind+shadcn/ui+lucide+Recharts, 内容可编辑", "容器只留算法引擎, 数据留仓库"]
+ "as_of": "2026-10-16T00:45+08:00",
+ "done": [
+  "6分片仓 db-daily-0..5 + Actions 部署 + 双job并发push冲突修复(单job+rebase) — 修复后6仓全部success",
+  "云端回补已推进: shard0=240, shard1~5=各120 (速率约120只/仓/30min)",
+  "本机 collector_v4 回补: 2385/5575 (含1997起历史)",
+  "React工作台已部署 Vela: ws-2e330313d6a5e812 (https://ws-2e330313d6a5e812.lightvela.tech/), 源码在 db-warehouse/workbench-src/",
+  "网站数据审核完成: 27文件健康, engine_v5无重复/降序/格式正确; 2条warning已记录 docs/WEBSITE_AUDIT.md",
+  "stock-memory 记忆仓库建立"
+ ],
+ "in_progress": [
+  "云端全史回补(预计2天)",
+  "本机回补",
+  "算法引擎链合并(子任务研读中)",
+  "89数据源适配器代码化(子任务已完成, commit待确认)"
+ ],
+ "todo": [
+  "moneyflow续补(sh600476后)",
+  "minute1续补",
+  "港股层",
+  "engine链实施(依P0/P1/P2报告)"
+ ]
 }
