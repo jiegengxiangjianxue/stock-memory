@@ -10,19 +10,27 @@ description: 48 个外部仓库合并任务的交接状态：9/48 已调研、39
 
 ## 当前进度
 
-### 已完成 (9/48 已调研)
-已写入 `docs/external-repos-research-2026-10-16.md`：
-1. electkismet/eltdx — Research-Only，通达信7709协议，**板块成分股/五档/竞价/逐笔** (我们缺)
-2. guangxiangdebizi/TradingAgents-MCPmode — **MIT 可抄代码**，15 Agent + 多空辩论 + 三层风控
-3. hengruiyun/AI-Stock-Master — AGPL-3.0，RTSI/MSCI/CoreStrength 三算法 (名字公开，公式未公开)
-4. guanquann/Stocksera — **MIT 可抄代码**，60+ 美股另类数据 (Reddit/WSB/SEC/议员交易/ARK)
-5. cloudQuant/backtrader — GPL-3.0，活跃 fork (2026-09 发版)，50+指标/21+数据源/HTML报告
-6. Lumiwealth/lumibot — GPL-3.0，2103 star，DataSource 抽象层 + replay caching
-7. BennyThadikaran/eod2 — GPL-3.0，NSE 专用，数据/代码仓分离 (我们已是一样架构)
-8. shi-rudo/awesome-stock-trading — 纯清单，付费 API 情报 **与 treg 调研 OVERLAP 无新增**
-9. AlgoTraders/stock-analysis-engine — **停更6年 (2020-09)，Yahoo API 早失效，K8s 架构不适用，不建议**
+### 已调研并落地 (12/48 有情报, 8 个已变成代码)
+报告: `docs/external-repos-research-2026-10-16.md` (含「借鉴→落地对照表」)
 
-### 未调研 (38/48)
+**License 可合法复制代码的**: a-stock-data (Apache-2.0, 最高价值) /
+TradingAgents-MCPmode (MIT) / Stocksera (MIT) / stock-api (MIT,TS) /
+stock-sdk (MIT,TS) / kand-ta/kand (Apache-2.0 OR MIT)。
+
+**已落地的 8 项**:
+- a-stock-data (Apache-2.0) → `fetchers_ticks.py` 腾讯逐笔 (CI 36只跑通)
+- a-stock-data (Apache-2.0) → `auction_engine.py` 资金结构四指标
+- a-stock-data (Apache-2.0) → `volume_units.py` 成交量单位归一化 (688按股,差13倍)
+- AI-Stock-Master (AGPL仅数学式) → `trend_strength.py` RTSI/TMA/MSCI
+- TradingAgents-MCPmode (MIT) → `bull_bear_debate.py` 多空辩论红队
+- cloudQuant/backtrader (GPL仅架构) → `analyzers.py` Analyzer 插件框架
+- lumibot (GPL仅设计) → `gitcode_ai_review.py` replay caching
+- kand-ta/kand (Apache/MIT) → `indicators_ext.py` +5 指标 (Vegas/Camarilla/HA/MFI/OBV)
+
+**关键止损结论**: 通达信公开服务器 K线/盘口/逐笔 2026-09 起全部失效
+(a-stock-data 用 10 台服务器逐台实测确认)。自研 7709 协议这条路已死。
+
+### 未调研 (36/48)
 **A股/数据 API (7)**: allen200909/stock, Vulthen/myhhub-stock-quantitative,
 siqyka/dsh-stock-leek, AnacondaKC/Aniu,
 zhangxiangliang/stock-api(MIT,TS,已粗看), GlacierBo/stock-api, zhaogods/tostock
