@@ -1,23 +1,23 @@
 {
- "as_of": "2026-10-16T00:45+08:00",
+ "as_of": "2026-10-16T02:35+08:00",
  "done": [
-  "6分片仓 db-daily-0..5 + Actions 部署 + 双job并发push冲突修复(单job+rebase) — 修复后6仓全部success",
-  "云端回补已推进: shard0=240, shard1~5=各120 (速率约120只/仓/30min)",
-  "本机 collector_v4 回补: 2385/5575 (含1997起历史)",
-  "React工作台已部署 Vela: ws-2e330313d6a5e812 (https://ws-2e330313d6a5e812.lightvela.tech/), 源码在 db-warehouse/workbench-src/",
-  "网站数据审核完成: 27文件健康, engine_v5无重复/降序/格式正确; 2条warning已记录 docs/WEBSITE_AUDIT.md",
-  "stock-memory 记忆仓库建立"
+  "云端分片回补运行中(修复后全绿), shard0=240+, parquet数据240只/仓(shard4实测240符号)",
+  "89源适配器库 db-warehouse/src/sources/ (30适配器, 冒烟8/10)",
+  "网站数据审核 docs/WEBSITE_AUDIT.md (27文件健康)",
+  "React工作台部署+源码入库 workbench-src/",
+  "stock-memory/research/ 三件套: absorb.json(20条)/chain-design.md(七环)/defects.json(26条)",
+  "P0四项全部落地: algo-core 4bf8fa7b(cyq换手率)+b00f2fa7(sizer); engine-core 45acca9b(data_check)+f24ea381(decision配置化)+b3f59213(fusion missing标记)+f0476d98(loss_attr四桶)",
+  "本机回补: daily 3081/5575, flow 580/4885 (从sh600477续, 48只/min每只全史)"
  ],
  "in_progress": [
-  "云端全史回补(预计2天)",
-  "本机回补",
-  "算法引擎链合并(子任务研读中)",
-  "89数据源适配器代码化(子任务已完成, commit待确认)"
+  "P1五项(algo_base/leaderboard/analyzers/agent_debate/market_data) 后台实施中",
+  "云端分片Actions持续",
+  "本机daily/flow回补"
  ],
  "todo": [
-  "moneyflow续补(sh600476后)",
+  "P2: run_registry+drift_monitor / TA-Lib CDL形态 / news_eval T+5闭环 / predict校准",
   "minute1续补",
   "港股层",
-  "engine链实施(依P0/P1/P2报告)"
+  "engine_v5.json fund收益率越界修复"
  ]
 }
