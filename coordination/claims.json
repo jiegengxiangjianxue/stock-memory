@@ -1,0 +1,52 @@
+{
+ "updated": "2026-10-16T02:55+08:00",
+ "owner_ai": "hermes-invest-assistant (本会话)",
+ "claiming_files": {
+  "algo-core": [
+   "run_registry.py(新)",
+   "drift_monitor.py(新)",
+   "patterns.py(改造)",
+   "market_phase.py(涨停阈值)",
+   "predict_algo.py(校准)",
+   "walkforward.py(切窗)",
+   "factor_lib.py(新增CDL因子)"
+  ],
+  "engine-core": [
+   "scripts/news_eval.py(新)",
+   "scripts/pick_tracker.py(性能)",
+   "scripts/adaptive_sampler.py(LIKE修复)",
+   "scripts/daily_brief.py(备源)"
+  ]
+ },
+ "touched_and_done": {
+  "algo-core": [
+   "cyq.py",
+   "sizer.py",
+   "algo_base.py",
+   "adapters.py",
+   "strategy_leaderboard.py",
+   "analyzers.py",
+   "backtest.py"
+  ],
+  "engine-core": [
+   "scripts/data_check.py",
+   "scripts/decision.py",
+   "scripts/engine_fusion.py",
+   "scripts/loss_attribution.py",
+   "scripts/agent_debate.py",
+   "scripts/pipeline_state.py",
+   "scripts/market_data.py",
+   "BASE/config.json"
+  ]
+ },
+ "not_touching": [
+  "db-daily-0..5 全部",
+  "db-warehouse",
+  "stocks-ai-view",
+  "analysis-hub",
+  "stocks-ops",
+  "t1-t13",
+  "workflow files"
+ ],
+ "protocol": "PUT前GET sha, 409重读合并, 只最小diff自己的部分"
+}
