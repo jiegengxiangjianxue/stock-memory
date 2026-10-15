@@ -1,8 +1,9 @@
 ---
 name: trading_scope_stocks_etf_only
 description: 用户只交易股票和 ETF，不要推荐转债/期权/期货/融资融券类技能
+type: identity
 ---
-用户明确表示「只玩股票和 ETF」，不涉及可转债、期权、期货、融资融券。
+用户交易范围是股票+ETF；不涉及可转债、期权、期货、融资融券作为交易对象，可转债等数据仅作市场情绪/溢价率辅助指标。
 
 含义：
 - 推荐/安装股票技能时跳过转债类（如 qmt-bridge-convertible，已按此原则删除，备份在 /tmp/qmt-bridge-convertible-backup）
