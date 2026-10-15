@@ -1,0 +1,26 @@
+{
+  "title": "算法引擎链研读报告 — absorb_list",
+  "count": 20,
+  "absorb_list": [
+    {"source": "qlib", "source_file": "qlib/data/dataset/processor.py 及 rolling/base.py", "what": "滚动任务生成器（rolling/base.py 滚动重训练窗口生成）", "target": "algo-core/walkforward 重构 + 新增 rolling_registry.py"},
+    {"source": "qlib", "source_file": "ddgda（drift-aware 模型）", "what": "漂移感知建模思路", "target": "新增 drift_monitor.py"},
+    {"source": "qlib", "source_file": "qlib/utils/recorder.py / workflow recorder", "what": "实验记录器（R 记录运行参数与产物）", "target": "新增 run_registry.py"},
+    {"source": "backtrader", "source_file": "backtrader/sizer.py", "what": "仓位 sizing 抽象（Sizer 类族）", "target": "新增 algo-core/sizer.py，decision.py 调用"},
+    {"source": "backtrader", "source_file": "backtrader/analyzers", "what": "回测分析器框架（Sharpe/DrawDown/TradeAnalyzer 等）", "target": "backtest.py + 新增 analyzers.py"},
+    {"source": "backtrader", "source_file": "backtrader/brokers + backtrader/fillers.py", "what": "佣金与滑点成交模拟", "target": "backtest.py 佣金滑点建模"},
+    {"source": "lumibot", "source_file": "lumibot/strategies/_strategy.py", "what": "策略生命周期钩子（initialize/on_trading_iteration/pick/predict/cycle）", "target": "新增 algo_base.py 改造 pick/predict/cycle 生命周期"},
+    {"source": "lumibot", "source_file": "lumibot/brokers/backtesting_broker.py", "what": "回测 broker 的打分与信号消重调度", "target": "backtest.py + pick_algo 打分消重"},
+    {"source": "Stocksera", "source_file": "scheduled_tasks/*.py", "what": "定时任务抓取 social 热度形成时序数据", "target": "social 热度时序落库 + factor_lib 情绪因子"},
+    {"source": "TradingAgents-MCPmode", "source_file": "workflow_orchestrator", "what": "多智能体工作流编排（辩论式决策）", "target": "engine_fusion 重构 + 新增 agent_debate.py"},
+    {"source": "TradingAgents", "source_file": "agent_states", "what": "Agent 状态机（pipeline 状态传递）", "target": "新增 pipeline_state.py"},
+    {"source": "eod2", "source_file": "eod2/diagnostic.py", "what": "数据完整性诊断与自愈", "target": "新增 data_check.py"},
+    {"source": "eod2", "source_file": "eod2/defs.py", "what": "fq（复权）事件校验与交易日历管理", "target": "fq 事件校验 + 新增 trade_calendar.py"},
+    {"source": "tostock", "source_file": "tostock/cyq.py", "what": "筹码分布计算（含换手率口径处理）", "target": "algo-core/cyq.py 换手率口径修正"},
+    {"source": "tostock", "source_file": "tostock/leaderboard.py", "what": "龙虎榜/游资排行策略", "target": "新增 strategy_leaderboard.py"},
+    {"source": "tostock", "source_file": "tostock/pattern_recognitions.py", "what": "K线形态识别", "target": "patterns.py + factor_lib TA-Lib CDL 形态因子"},
+    {"source": "NewsAlpha", "source_file": "eval 模块", "what": "新闻因子 T+5 回测评估闭环", "target": "新增 news_eval.py T+5 回测闭环"},
+    {"source": "NewsAlpha", "source_file": "预过滤模块", "what": "新闻预过滤降低 LLM token 消耗", "target": "llm_review 预过滤省 token"},
+    {"source": "stock-api", "source_file": "多源行情适配层", "what": "多数据源 quote/kline 统一适配与降级", "target": "新增 market_data.py 统一 quote/kline + 降级链"},
+    {"source": "qlib", "source_file": "qlib/model/trainer.py", "what": "延迟训练（delay train）机制", "target": "walkforward P2 优化"}
+  ]
+}
