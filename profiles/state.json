@@ -1,18 +1,29 @@
 {
- "as_of": "2026-10-16T03:15+08:00",
- "done": [
-  "P0+P1+P2 全部12项完成 (24+ commits): 算法引擎链七环全通",
-  "P2: run_registry/drift_monitor/walkforward交易日embargo/CDL形态5因子/涨停阈值修正/news_eval T+5/pick_tracker性能/LIKE修复/daily_brief备源/predict logistic校准",
-  "双胞胎大合并完成: GitHub=canonical(63引擎), gitcode=镜像, ENGINE_REGISTRY登记ownership",
-  "gitcode 17独有引擎并入GitHub; GitHub修复版推回gitcode"
- ],
- "in_progress": [
-  "本机资金流回补 1101/4885 (daily已交云端)",
-  "云端分片Actions"
- ],
- "todo": [
-  "港股层",
-  "minute1",
-  "工作台接入新引擎数据"
- ]
+  "as_of": "2026-10-16T03:15+08:00",
+  "done": [
+    "P0+P1+P2 全部12项完成 (24+ commits): 算法引擎链七环全通",
+    "P2: run_registry/drift_monitor/walkforward交易日embargo/CDL形态5因子/涨停阈值修正/news_eval T+5/pick_tracker性能/LIKE修复/daily_brief备源/predict logistic校准",
+    "双胞胎大合并完成: GitHub=canonical(63引擎), gitcode=镜像, ENGINE_REGISTRY登记ownership",
+    "gitcode 17独有引擎并入GitHub; GitHub修复版推回gitcode"
+  ],
+  "in_progress": [
+    "本机资金流回补 1101/4885 (daily已交云端)",
+    "云端分片Actions"
+  ],
+  "todo": [
+    "港股层",
+    "minute1",
+    "工作台接入新引擎数据"
+  ],
+  "2026-10-16_round2": {
+    "factor_lib": "34 -> 114 因子 (alpha_ext 40 + alpha_ext2 40, 全部真实数据验证)",
+    "new_repos": {
+      "db-fin-0": "财务指标 1989-2026 38年全史, fin run success",
+      "db-hk-0": "港股 2072 symbols, run success",
+      "db-min-0": "5分钟线 (样票 2020-2026 78816根验证通过)"
+    },
+    "algo_batch2": "stress_test/ensemble_selector/backtest_grid (commits e5d5459e,3e582cb8,ebf0dfbd)",
+    "factor_matrix": "全市场74因子矩阵预计算中 (factor_matrix.py)",
+    "fin_screen": "财务因子接入选股引擎链 (deleg_fb0c35a7 进行中)"
+  }
 }
