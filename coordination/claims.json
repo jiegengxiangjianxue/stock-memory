@@ -1,52 +1,38 @@
 {
- "updated": "2026-10-16T02:55+08:00",
- "owner_ai": "hermes-invest-assistant (本会话)",
- "claiming_files": {
+ "updated": "2026-10-16T03:05+08:00",
+ "discovery": "gitcode.com/dufuwuxin/engine-core 是另一AI维护的引擎双胞胎(17个独有引擎: audit/challenge/flaw/diffusion/scenario/scoring/hotspot等), cloud-runner workflow 从 gitcode 拉私有副本跑云端引擎",
+ "twin_sync_protocol": {
+  "github_engine-core": "本AI维护: P0-P1算法链成果(cyq修复/sizer/algo_base/leaderboard/analyzers/agent_debate/market_data等)",
+  "gitcode_engine-core": "其他AI维护: 17个独有引擎, engines/ 目录为主场, 本AI不碰",
+  "sync_direction_done": [
+   "gitcode 17独有引擎 → github engine-core/scripts/twin/ (归档, 17/17 PUT成功)",
+   "github 4新成果(data_check/agent_debate/pipeline_state/market_data) → gitcode engines/hermes_sync/ (POST成功)"
+  ],
+  "rule": "共有文件(decision/engine_fusion/loss_attribution等)两侧各有演化, 不互相覆盖; 新增文件放独立子目录(twin/ 和 hermes_sync/)"
+ },
+ "claims_files": {
   "algo-core": [
    "run_registry.py(新)",
    "drift_monitor.py(新)",
-   "patterns.py(改造)",
-   "market_phase.py(涨停阈值)",
-   "predict_algo.py(校准)",
-   "walkforward.py(切窗)",
-   "factor_lib.py(新增CDL因子)"
+   "patterns.py",
+   "market_phase.py",
+   "predict_algo.py",
+   "walkforward.py",
+   "factor_lib.py"
   ],
   "engine-core": [
    "scripts/news_eval.py(新)",
-   "scripts/pick_tracker.py(性能)",
-   "scripts/adaptive_sampler.py(LIKE修复)",
-   "scripts/daily_brief.py(备源)"
-  ]
- },
- "touched_and_done": {
-  "algo-core": [
-   "cyq.py",
-   "sizer.py",
-   "algo_base.py",
-   "adapters.py",
-   "strategy_leaderboard.py",
-   "analyzers.py",
-   "backtest.py"
-  ],
-  "engine-core": [
-   "scripts/data_check.py",
-   "scripts/decision.py",
-   "scripts/engine_fusion.py",
-   "scripts/loss_attribution.py",
-   "scripts/agent_debate.py",
-   "scripts/pipeline_state.py",
-   "scripts/market_data.py",
-   "BASE/config.json"
+   "scripts/pick_tracker.py",
+   "scripts/adaptive_sampler.py",
+   "scripts/daily_brief.py"
   ]
  },
  "not_touching": [
-  "db-daily-0..5 全部",
+  "gitcode engines/下其他AI文件",
+  "db-daily-0..5",
   "db-warehouse",
   "stocks-ai-view",
   "analysis-hub",
-  "stocks-ops",
-  "t1-t13",
-  "workflow files"
- ],
- "protocol": "PUT前GET sha, 409重读合并, 只最小diff自己的部分"
+  "t1-t13"
+ ]
 }
