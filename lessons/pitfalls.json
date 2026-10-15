@@ -1,0 +1,11 @@
+[
+  "并发写同一 parquet 年分区会写坏文件(zstd decompression error): 必须 fcntl flock + tmp 文件 os.replace 原子替换",
+  "_index.json 并发读写会撞坏: 同样必须文件锁",
+  "腾讯 fqkline 接口并发约1750请求后返回 501: 限并发<=4, 请求间隔>=0.25s",
+  "腾讯接口返回 'int' object is not iterable: update_index 传行数时 symbols_minmax 要显式传元组",
+  "Actions 双矩阵 job 并发 push 同仓会 fetch-first 被拒: 每仓单 job + push 前 git pull --rebase",
+  "新浪 hs_a 列表分页会漂移(边拉边变): 允许少量重复, 用 set 去重",
+  "东财 push2 clist 接口 403 (无有效 UA/Referer 组合): 列表用新浪替代",
+  "GitHub raw.githubusercontent 对 parquet 需走 API git blobs (Accept: application/vnd.github.raw)",
+  "Actions 免费额度 2000分钟/月: 6仓x48轮/天x2job 约1200-1500分钟, 回补完改每日一次"
+]

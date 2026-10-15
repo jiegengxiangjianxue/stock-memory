@@ -1,0 +1,7 @@
+{
+  "as_of": "2026-10-16",
+  "done": ["6分片仓+Actions部署+双job冲突修复", "全市场symbol表5575只", "云端首批backfill提交并验证1997数据", "db-warehouse v4架构文档"],
+  "in_progress": ["云端全史回补(约2天)", "本机回补(1493+/5575)", "算法引擎链合并(借鉴qlib/backtrader/lumibot等30+项目)", "React工作台", "skills接口入库"],
+  "todo": ["moneyflow续补(sh600476后)", "minute1续补", "港股层", "89数据源接口代码化入库"],
+  "user_prefs": ["只报事实不预测", "简洁", "价格给具体数字", "React+TS+Tailwind+shadcn/ui+lucide+Recharts, 内容可编辑", "容器只留算法引擎, 数据留仓库"]
+}

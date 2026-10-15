@@ -1,0 +1,21 @@
+{
+  "updated": "2026-10-16",
+  "accounts": {
+    "jiegengxiangjianxue": {"token_owner": "账号3", "roles": ["数据层-0/1", "分析中枢 analysis-hub/db-warehouse/engine-core/algo-core"]},
+    "dufuwuxin": {"token_owner": "账号2", "roles": ["数据层-2/3", "运维 stocks-ops", "分片 d1-d6"]},
+    "qwerzxcva": {"token_owner": "账号1", "roles": ["数据层-4/5", "视图 stocks-ai-view", "云仓 t1-t13", "cloud-runner"]},
+    "gitcode_dufuwuxin": {"note": "gitcode.com 账号, 备用同步"}
+  },
+  "core_repos": {
+    "jiegengxiangjianxue/db-warehouse": "采集器源码+架构文档 (中枢)",
+    "jiegengxiangjianxue/{db-daily-0,db-daily-1}": "日K分片 shard 0/1",
+    "dufuwuxin/{db-daily-2,db-daily-3}": "日K分片 shard 2/3",
+    "qwerzxcva/{db-daily-4,db-daily-5}": "日K分片 shard 4/5",
+    "jiegengxiangjianxue/analysis-hub": "LLM复盘/决策数据",
+    "jiegengxiangjianxue/engine-core": "引擎脚本 ~25个 (信号/资金流/决策/归档)",
+    "jiegengxiangjianxue/algo-core": "算法 ~18个 (29因子/RPS轮动/市场六阶段/walkforward/回测)",
+    "jiegengxiangjianxue/{jiegengxiangjianxue1,2,3}/db-stocks-a~e": "旧数据分仓 ~1.1GB (含 moneyflow_hist 2010-2026)",
+    "qwerzxcva/stocks-ai-view": "主视图 (89个数据源注册表 sources_registry.json)",
+    "dufuwuxin/stocks-ops": "健康检查"
+  }
+}

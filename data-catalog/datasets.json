@@ -1,0 +1,26 @@
+{
+  "updated": "2026-10-16",
+  "daily": {
+    "schema": ["symbol","date","open","close","high","low","volume"],
+    "format": "parquet(zstd), 分区 wh/daily/{YYYY}.parquet, 按 symbol+date 去重",
+    "adjust": "qfq 前复权",
+    "coverage_plan": "A股5575只(含北交所) 全史1997起",
+    "sharding": "symbol 排序后 codes[shard::6], shard 0-5 -> db-daily-0..5",
+    "backfill": "GitHub Actions 每30分钟一批120只/仓job; 本机 collector_v4.py 并行 (断点 _done_daily.txt)",
+    "symbols_source": "新浪 Market_Center.getHQNodeData node=hs_a 分页全表"
+  },
+  "moneyflow_hist": {
+    "schema": ["symbol","date","trade","changeratio","turnover","netamount","r0..r3","r0_net..r3_net"],
+    "coverage": "旧仓 db-stocks-a~e 已有 2010-2026 到 sh600476, 待续补",
+    "source": "新浪 MoneyFlow.ssl_qsfx_lscjfb"
+  },
+  "minute1": {
+    "schema": ["symbol","date","hhmm","open","close","high","low","volume","amount"],
+    "coverage": "202610 月分区 322万行 (旧仓), 待续补"
+  },
+  "sources_registry": {
+    "location": "qwerzxcva/stocks-ai-view data/sources_registry.json",
+    "count": 89,
+    "by_status": {"ok": 61, "degraded": 6, "blocked": 12, "unauth": 8, "untested": 2}
+  }
+}
