@@ -1,23 +1,20 @@
 {
- "as_of": "2026-10-16T02:35+08:00",
+ "as_of": "2026-10-16T02:50+08:00",
  "done": [
-  "云端分片回补运行中(修复后全绿), shard0=240+, parquet数据240只/仓(shard4实测240符号)",
-  "89源适配器库 db-warehouse/src/sources/ (30适配器, 冒烟8/10)",
-  "网站数据审核 docs/WEBSITE_AUDIT.md (27文件健康)",
-  "React工作台部署+源码入库 workbench-src/",
-  "stock-memory/research/ 三件套: absorb.json(20条)/chain-design.md(七环)/defects.json(26条)",
-  "P0四项全部落地: algo-core 4bf8fa7b(cyq换手率)+b00f2fa7(sizer); engine-core 45acca9b(data_check)+f24ea381(decision配置化)+b3f59213(fusion missing标记)+f0476d98(loss_attr四桶)",
-  "本机回补: daily 3081/5575, flow 580/4885 (从sh600477续, 48只/min每只全史)"
+  "P0 四项: cyq换手率修复(turnover_rate列36分区607万行回填)+data_check+decision配置化+ATR止损+fusion missing标记+loss_attr四桶",
+  "P1 五项: algo_base/adapters(ALGOS注册表)/strategy_leaderboard(duckdb)/analyzers五指标/backtest滑点+一字板过滤/agent_debate(bull-bear-manager)/pipeline_state/market_data统一行情 — algo-core HEAD=2b7c28ab, engine-core HEAD=ee6d3e08",
+  "stock-memory/research/ 三件套",
+  "89源适配器库+工作台+网站审核"
  ],
  "in_progress": [
-  "P1五项(algo_base/leaderboard/analyzers/agent_debate/market_data) 后台实施中",
-  "云端分片Actions持续",
-  "本机daily/flow回补"
+  "P2 五项(run_registry+drift_monitor/CDL形态+涨停阈值修正/news_eval T+5/pick_tracker性能/predict校准)后台中",
+  "云端分片(cron免费仓延迟10-60min属正常, 已手动补触发)",
+  "本机daily 3081/5575 + flow 775/4885"
  ],
  "todo": [
-  "P2: run_registry+drift_monitor / TA-Lib CDL形态 / news_eval T+5闭环 / predict校准",
   "minute1续补",
   "港股层",
-  "engine_v5.json fund收益率越界修复"
+  "P1 demos验证扩展",
+  "engine_v5 fund收益率越界"
  ]
 }
