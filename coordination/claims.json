@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T03:05+08:00",
+ "updated": "2026-10-16T03:45+08:00",
  "discovery": "gitcode.com/dufuwuxin/engine-core 是另一AI维护的引擎双胞胎(17个独有引擎: audit/challenge/flaw/diffusion/scenario/scoring/hotspot等), cloud-runner workflow 从 gitcode 拉私有副本跑云端引擎",
  "twin_sync_protocol": {
   "github_engine-core": "本AI维护: P0-P1算法链成果(cyq修复/sizer/algo_base/leaderboard/analyzers/agent_debate/market_data等)",
@@ -34,5 +34,21 @@
   "stocks-ai-view",
   "analysis-hub",
   "t1-t13"
- ]
+ ],
+ "claiming_repos_new": {
+  "db-fin-0": "财务因子全史管道 (建设中, 本AI)",
+  "db-min-0/db-min-1": "分钟线全史 (建设中, 本AI)",
+  "db-hk-0": "港股日K (建设中, 本AI)",
+  "db-cnflow-0或db-fin-0": "北向/两融历史 (建设中, 本AI)",
+  "algo-core": [
+   "alpha_ext.py(新)",
+   "backtest_grid.py(新)",
+   "ensemble_selector.py(新)",
+   "stress_test.py(新)"
+  ],
+  "engine-core": [
+   "scripts/fin_factor.py(新)"
+  ]
+ },
+ "sample_expansion": "引擎训练样本扩容: daily 628万行(143MB)已有; 新增财务因子/分钟线5m/港股/北向两融四路管道"
 }
