@@ -1,0 +1,32 @@
+{
+  "title": "算法引擎链研读报告 — 缺陷清单",
+  "count": 28,
+  "defects": [
+    {"id": 1, "location": "algo-core/cyq.py:93-95", "issue": "换手率口径错误（与 tostock cyq.py 对照确认）"},
+    {"id": 2, "location": "algo-core/cyq.py:96-110", "issue": "一字板单点放置，筹码分布失真"},
+    {"id": 3, "location": "factor_lib.py:104-109", "issue": "异常静默吞掉返回 NaN，掩盖数据问题"},
+    {"id": 4, "location": "patterns.py:20-24", "issue": "索引切片硬编码，依赖 DataFrame 具体索引位置"},
+    {"id": 5, "location": "walkforward.py:118-137", "issue": "用平均分而非实现收益选参数，选择偏差"},
+    {"id": 6, "location": "walkforward.py:24-38", "issue": "按自然日切窗造成数据泄漏（应按交易日）"},
+    {"id": 7, "location": "backtest.py:16-18", "issue": "数据路径硬编码"},
+    {"id": 8, "location": "backtest.py:95-100", "issue": "无佣金与滑点建模"},
+    {"id": 9, "location": "pick_algo.py:268-331", "issue": "线程竞态 + 重复扫描文件"},
+    {"id": 10, "location": "pick_algo.py:346-360", "issue": "min_score=55 硬编码，未随市场状态自适应"},
+    {"id": 11, "location": "ai_pick.py:10-26", "issue": "import 时即连接数据库，副作用副作用在模块加载期"},
+    {"id": 12, "location": "ai_pick.py:44-50", "issue": "O(n) 全表扫描，无索引"},
+    {"id": 13, "location": "market_phase.py:96-98", "issue": "涨停阈值 10% 不适用 ST（5%）与 20cm 板"},
+    {"id": 14, "location": "predict_algo.py:80-149", "issue": "因子权重硬编码，无校准机制"},
+    {"id": 15, "location": "rps_rotation.py:17-19", "issue": "全市场内存 pivot，内存与耗时不可控"},
+    {"id": 16, "location": "decision.py:66", "issue": "capital 资金硬编码"},
+    {"id": 17, "location": "decision.py:88-93", "issue": "固定 ±2% 止损，无波动率自适应"},
+    {"id": 18, "location": "engine_fusion.py:16-49", "issue": "异常静默返回 0 分，掩盖引擎故障"},
+    {"id": 19, "location": "loss_attribution.py:30-44", "issue": "归因三桶非四桶 + chase_high 用近似而非精确归因"},
+    {"id": 20, "location": "pick_tracker.py:99-115", "issue": "O(N×files) 文件 IO，逐次全量读"},
+    {"id": 21, "location": "intraday_signal.py:16-18", "issue": "依赖 10:30 精确记录时间点，鲁棒性差"},
+    {"id": 22, "location": "adaptive_sampler.py:46-48", "issue": "LIKE 过滤误伤 sz0030xx 创业板代码段"},
+    {"id": 23, "location": "daily_brief.py:16-28", "issue": "无重试、无备源，单点失败即空报告"},
+    {"id": 24, "location": "全链路（入库层）", "issue": "无入库数据校验（schema/完整性）"},
+    {"id": 25, "location": "全链路（walkforward/monitor）", "issue": "无 drift 检测自动重训触发"},
+    {"id": 26, "location": "全链路（阶段间接力）", "issue": "JSON 文件接力无 schema 版本号"}
+  ]
+}
