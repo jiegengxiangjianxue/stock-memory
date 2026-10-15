@@ -1,0 +1,12 @@
+# 数据目录 data-catalog (2026-10-16 更新)
+
+| 数据集 | 仓库 | 范围 | 状态 |
+|---|---|---|---|
+| A股日线全史 | db-stocks/* + db-daily-0..5 | 1997-2026, 3086+票, 628万行+ | 云端滚动 |
+| 财务指标 | db-fin-0 data/fin_indicator | 1989-2026, 38年 | run success |
+| 5分钟线 | db-min-0/1 wh/minute5 | 2020-2026 月分区 | 云端滚动 |
+| 港股日K | db-hk-0 wh/hk_daily | 2072 symbols | 云端滚动 |
+| 资金流 | db-stocks moneyflow_hist | 2000- | 本机回补中 2112/4885 |
+| 因子矩阵 | 本机 factor_matrix.duckdb | 695万行×3317票×117列 | 已建成 |
+| IC扫描 | algo-core data/factor_ic_scan.csv | 110因子 RankIC | 已入库 |
+| IC合成top50 | algo-core data/ic_composite_top50.csv | 250d IC 0.67(含时序) | 已入库 |
